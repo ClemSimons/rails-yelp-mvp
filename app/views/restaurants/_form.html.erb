@@ -1,0 +1,20 @@
+<%= simple_form_for(@restaurant) do |f| %>
+
+  <%= f.error_notification message: "smth went wrong" %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+
+  <%= f.label :phone_number %>
+  <%= f.text_field :phone_number %>
+
+  <%= f.label :category %>
+  <%= f.select :category, Restaurant::CATEGORY, prompt: "Choose a category" %>
+
+  <%= f.submit %>
+
+<% end %>
+
